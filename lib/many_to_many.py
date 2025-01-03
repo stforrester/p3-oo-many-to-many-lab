@@ -38,6 +38,10 @@ class Contract:
     
     all = []
 
+    @classmethod
+    def contracts_by_date(cls, date):
+        return [contract for contract in cls.all if (contract.date == date)]
+
     def __init__(self, author, book, date, royalties):
         self.author = author
         self.book = book
